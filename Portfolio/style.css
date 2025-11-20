@@ -1,0 +1,47 @@
+/* Minimal Bootstrap-like styles to support nav tabs */
+
+/* Base and variables */
+:root {
+	--bs-border-color: #dee2e6;
+	--bs-link: #292a2c;
+	--bs-link-hover: #df78b7;
+	--bs-body-bg: #ffffff;
+	--bs-body-color: #212529;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+	margin: 0;
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+		"Noto Sans", "Liberation Sans", sans-serif;
+	color: var(--bs-body-color);
+	background: var(--bs-body-bg);
+	line-height: 1.5;
+}
+
+/* Navigation (custom, non-Bootstrap) */
+.site-nav { padding: 1rem 1rem 0.5rem; }
+.tabs { display:flex; list-style:none; margin:0; padding:0; gap:0.25rem; border-bottom:1px solid var(--bs-border-color); }
+.tabs.align-end { justify-content:flex-end; }
+.tab { display:inline-block; padding:0.5rem 1rem; text-decoration:none; color:var(--bs-link); border:1px solid transparent; border-radius:0.4rem 0.4rem 0 0; position:relative; top:1px; background:transparent; }
+.tab:hover, .tab:focus { color:var(--bs-link-hover); }
+.tab.active { background:#fff; border:1px solid var(--bs-border-color); border-bottom-color:#fff; color:#495057; }
+.tab:focus-visible { outline:2px solid var(--bs-link-hover); outline-offset:2px; }
+
+/* Page wrapper */
+.page-wrapper { max-width:960px; margin:0 auto; padding:1rem 1rem; }
+.page-title { margin:0 0 1rem; font-size:2rem; line-height:1.2; }
+
+/* Profile card */
+.profile-card { display:flex; flex-wrap:wrap; background:#fff; border:1px solid var(--bs-border-color); border-radius:0.5rem; box-shadow:0 .125rem .25rem rgba(0,0,0,.075); overflow:hidden; }
+.profile-card { transition: transform .25s ease, box-shadow .25s ease; will-change: transform; }
+.profile-card:hover { transform: translateY(-4px); box-shadow:0 .5rem 1rem rgba(0,0,0,.15); }
+.profile-card:focus-within { outline:2px solid var(--bs-link-hover); outline-offset:2px; }
+.card-media { flex:0 0 200px; background:#f8f9fa; }
+.card-media img { display:block; width:100%; height:auto; }
+.card-content { flex:1 1 0; padding:1rem 1.25rem; min-width:240px; }
+.card-content p { margin:0; font-size:0.95rem; line-height:1.5; }
+@media (max-width: 640px) { .card-media { flex:0 0 100%; } }
+
+
