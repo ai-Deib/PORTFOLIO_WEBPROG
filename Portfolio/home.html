@@ -3,33 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Home Page</title>
-    <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="John Doe">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-STnA5lEixSeK1NHfYkP82afvfAvFp8Z64KbjDgq09uXBJgp7wa9u0J7RKnQ2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-     <nav class="site-nav" aria-label="Main navigation">
-         <ul class="tabs align-end">
-             <li><a class="tab active" href="home.html" aria-current="page">Home</a></li>
-             <li><a class="tab" href="blog.html">Blog</a></li>
-             <li><a class="tab" href="contacts.html">Contacts</a></li>
-         </ul>
-     </nav>
-     <div class="page-wrapper">
-         <h1 class="page-title">Welcome to My Portfolio</h1>
-         <div class="profile-card">
-             <figure class="card-media">
-                 <img src="" alt="Profile image">
-             </figure>
-             <div class="card-content">
-                 <p>Hi I'm Alexander Dave L. de Guzman, 19 years old who enjoys the envoys of coding of misery, frustrations, 
-                    and a love-hate relationship of developing. I aspire to be a back-end developer specifically in data management category.</p>
-                    
-             </div>
-         </div>
-     </div>
+    <nav class="site-nav" aria-label="Main navigation">
+        <div class="brand">Dabe</div>
+        <ul class="tabs align-end">
+            <li><a class="tab active" href="home.html" aria-current="page">Home</a></li>
+            <li><a class="tab" href="bio.html">Bio</a></li>
+            <li><a class="tab" href="contacts.html">Contacts</a></li>
+        </ul>
+    </nav>
+    <div class="page-wrapper">
+        <h1 class="page-title">WELCOME TO MY PORTFOLIO</h1>
+        <div class="layout-grid">
+            <section class="card card--profile" aria-labelledby="intro-heading">
+                <div class="intro-content">
+                    <figure class="profile-media">
+                        <img src="pictureko.jpg" alt="Profile portrait" loading="lazy" decoding="async" width="260" height="220" />
+                    </figure>
+                    <p>Hello! I'm <strong>Alexander Dave L. de Guzman</strong>, 19 years old. I embrace the challenging journey of coding—the frustrations, breakthroughs, and growth that come with creating software.</p>
+                    <p>I aim to become a <strong>Back-end Developer</strong> specializing in <strong>Data Management</strong>: designing schemas, optimizing queries, building APIs, and ensuring performance and integrity.</p>
+                    <ul class="tag-list" aria-label="Interests and focus areas">
+                        <li>Database Design</li>
+                        <li>Data Modeling</li>
+                        <li>API Engineering</li>
+                        <li>Learning SQL & Python</li>
+                    </ul>
+                    <div class="clearfix" aria-hidden="true"></div>
+                </div>
+            </section>
+            <aside class="card card--side attr-card" aria-labelledby="attr-heading">
+                <h2 id="attr-heading">PERSONAL ATTRIBUTE</h2>
+                <ul class="attr-list">
+                    <li>WEIGHT:<span>65KG</span></li>
+                    <li>HEIGHT:<span>167CM</span></li>
+                    <li>AGE:<span>19 Y.O</span></li>
+                    <li>FOCUS:<span>Data Management</span></li>
+                    <li>STATUS:<span>Student</span></li>
+                    <li>HOBBY:<span>VOLLEYBALL | LIFTING | SLEEP</span></li>
+                </ul>
+            </aside>
+        </div>
+    </div>
      
 </body>
 </html>
